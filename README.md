@@ -260,9 +260,9 @@ Master-käyttäjä ylläpitää palvelua: lisää/poistaa tulevat liikuntatunnit
     Booking --|> ClassIsAvailable
     ClassIsAvailable --|> Class
     User --> ClassIsAvaialble
-    User --> Comment
     Booking --> DB
     ClassIsAvailable --> DB
+    
 @enduml
 ```
 
@@ -294,81 +294,74 @@ Sovellus on toteutettu suunnitelman mukaan, ei poikennut vaatimusmäärittelyst�
 
 | Tunnus | Ominaisuus | Prioriteetti | Toteuttumisprosentti | Muuta |
 | :-: | :-: | :-: | :-: | :-: |
-| FT01 | [ Tunnusten luominen ja kirjautuminen](../liitteet/f1_login.md) | Pakollinen | 100% ||
-| FT02 | [ Lisää/poistaa työkalu ](../liitteet/f2_tools.md) | Pakollinen | 100% ||
-| FT03 | [ Tunnusten poistaminen](../liitteet/f3_delete_account.md) | Pakollinen | 100% ||
-| FT04 | [ Mahdollisuus arvioida käyttäjiä ](../liitteet/f4_rating.md) | Nice to Have | 100% ||
-| FT05 | [ Työkalujen kommentoiminen ](../liitteet/f5_comment.md) | Nice to Have | 70% | Kommentit ei esinny oikeassa järjestyksessä |
-| FT06 | [ Työkalujen vuokraaminen ](../liitteet/f6_rentatool.md) | Pakollinen | 100% ||
-| FT07 | [ Työkalujen palautus ](../liitteet/f7_returntool.md) | Pakollinen | 100% ||
+| FT01 | [ Tunnusten luominen ja kirjautuminen](links/f1_login.md) | Pakollinen | 100% ||
+| FT02 | [ Lisää/poistaa varaus ](links/f2_booking.md) | Pakollinen | 100% ||
+| FT02 | [ Lisää/poistaa varauksia ](links/f2_bookings.md) | Pakollinen | 100% ||
+| FT03 | [ Tunnusten poistaminen](links/f3_delete_account.md) | Pakollinen | 100% ||
+| FT04 | [ Profiilin editointi](links/f4_edit_account.md) | Pakollinen | 100% ||
+| FT05 | [ Admin/Master ominnaisuudet](links/f5_admin.md) | Nice to Have | 100% ||
+| FT06 | [ Lisää/poista liikuntatunti ](links/f6_add_a_class.md) | Nice to Have | 60% ||
 
 ### Toteuttamatta jääneet toiminnalliset vaatimukset
 
-Ei jäänyt yhtään toiminnallista ominaisuutta/vaatimusta toteuttamatta, ainoa missä on ongelma on 'kommentit' - ei esinny oikeassa järjestyksessä käyttöliittymässä, muuten toimii.
+Yksi, joka on jäänyt toteutumtta on "posta liikuntatunti". Laravel ei hyväksynyt Reactista saapuvan DELETE metodia. Ilmestyi koko ajan FORBIDDEN 403 virhe. 
 
-### Yli alkuperäisten vaatimusten toteutetut toiminnallisuudet
-
-Toteutin piilotetun ikkunan, jossa on toiminnallisuus, joka lisää käyttäjän asettaman määrän satunnaisia työkaluja testaamista varten. Käsiksi siihen ikkunaan pääsee painamalla F1
-'AddATool' ikkunan auki ollessa. Sitä ennen 'Register'-ikkunalle tein samantyylisen toiminnallisuuden, joka ei ole niinkään piilotettu. Sieltä löytyy 'Fill'-button, jota klikkamalla
-pystyy täyttämään kaikki rekiströintikentät satunnaisilla arvoilla, tämäkin ominaisuus on tehty testaamista varten.
+Toinen ongelma oli silloin kun yritin asentaa erillisen kalenteri-komponentin Reactiin.
+Sain asennettu komponentin, mutta en saanut siihen dataa tietokannasta.
 
 ## Kuvaruutukaappaukset
 
-### 'Login'-ikkuna
-<img src="images/itool_login.JPG" alt="iTool v1" width="400">
+### 'Login'-sivu
+<img src="links/login.JPG" alt="FinessStudio" width="400">
 
-* Login ikkunassa pystyy kirjautumaan iTool-sovellukseen sisään tai siirtymään rekiströintiin.
+* Login ikkunassa pystyy kirjautumaan Fitness Studioon sisään.
 
-### 'Register'-ikkuna
-<img src="images/itool_register.JPG" alt="iTool v1" width="700">
+### 'Register'-sivu
+<img src="links/register.JPG" alt="FinessStudio" width="400">
 
-* Register ikkunassa pystyy rekiströitymään iTool-palveluun, kaikki kentät on pakollisia, paitsi kuva.
-* Löytyy myös 'Fill' nappi, jota klikkaamalla voi täyttää kentät satunnaisilla tiedoilla. Nappi on luotu testausta varten.
+* Register ikkunassa pystyy rekiströitymään fitness-studioon, kaikki kentät on pakollisia.
 
-### 'Main'-ikkuna
-<img src="images/itool_main.JPG" alt="iTool v1" width="900">
+### 'Classes'-sivu
+<img src="links/classes.JPG" alt="FinessStudio" width="700">
 
-* Mainissa voi selailla ja vuokrata työkaluja.
-* Datagridissa työkalua klikkaamalla voi nähdä työkalun kuvan ja tiedot yksityiskohtaisemmin ikkunan alaosassa.
-* Vasemmassa laidassa on suodattimia, jotka suodattaa joko sijainnin tai kategorian mukaan.
-* Yläpalkista löytyy 'Etsi'-kenttä, jonka avulla voi etsiä työkaluja nimen tai nimen osan mukaan.
-* Profiilikuvaa klikkaamalla pääsee siirtymään 'User profile'-ikkunaan.
-* Työkalua valitsemalla ja 'Comment'-nappia painamalla aukee 'Comment'-ikkuna.
+* Classes-ikkunssa voi selailla ja varata tulevia liikuntatunteja
+* Liikuntatuntia kllikkaamalla pääsee lukemaan enemmän infoa tunnista
+* Take Class - näppäintä klikkaamalla varataan liikuntatunnin
+* Adminit ja Masterit näkee "Add Class" - ikkunan, josta pääsee lisäämään tulevia liikuntatunteja
 
-### 'Commment'-ikkuna
-<img src="images/itool_comment.JPG" alt="iTool v1" width="500">
+### 'Bookings'-sivu
+<img src="links/bookings.JPG" alt="FinessStudio" width="500">
 
-* Comment ikkunassa voi jättää uusia kommentteja koskien kyseistä työkalua
-* Voi myös vastata olemassa oleviin kommenteihin klikkaamalla kommenttia
-* Kommentit jätetään painamalla 'Enter'-nappia
+* Bookings sivulla pääsee selaamaan omat tulevat liikuntatunnit.
+* Pystyy myös peruuttaamaan ne
 
-### 'Profile'-ikkuna
-<img src="images/itool_profile.JPG" alt="iTool v1" width="800">
+### 'Settings'-sivu
+<img src="links/settings.JPG" alt="FinessStudio" width="800">
 
-* Profiili-ikkunassa nähdään 3 listaa: "Omat työkalut", "Omat vuokratut työkalut" ja "Omat transaktiot"
-* Työkaluja tai transaktioita valitsemalla pääsee näkemään niiden tiedot iksityiskohtaisemmin
-* Valitsemalla työkalu "Omat työkalut" listasta ja painamalla 'Delete' nappia voidaan poistaa työkalu kokonaan
-* Valitsemalla työkalu "Omat vuokratut työkalut" listasta ja painamalla 'Space' nappia voidaan palauttaa vuokratun työkalun omistajalleen
-* Valitsemalla transaktio "Omat transaktiot" listasta ja painamalla 'Space' nappia voidaan antaa transaktion toiselle osapuolelle arvion
-* Vasemassa laidassa on palkki, josta pääsee muokkaamaan omaa profiiliä
+* Settings sivulla näkee omat tiedot
+* Voi vaihtaa salasana
+* Voi vaihtaa s-posti
+* Voi poistaa tunnukset
 
-### 'Edit Profile'-ikkuna
-<img src="images/itool_edit.JPG" alt="iTool v1" width="700">
+### 'Change Password'-sivu
+<img src="links/change.JPG" alt="FitnessStudio" width="700">
 
-* Edit profile ikkunassa voi muokata omat profiilitiedot
+* Change Password sivulla voi vaihtaa salasana
 
-### 'Add a Tool'-ikkuna
-<img src="images/itool_addtool.JPG" alt="iTool v1" width="700">
+### 'Change Email'-sivu
+<img src="links/email.JPG" alt="FitnessStudio" width="700">
 
-* Lisää työkalu - ikkunassa voi lisätä uusia työkaluja
-* Kaikki kentät työkalun kuvaa lukuunottamatta ovat pakollisia
+* Change Email sivulla pääsee vaihtaa s-posti
 
-### Piilotettu 'Add random tools'-ikkuna
-<img src="images/itool_addrandomtools.JPG" alt="iTool v1" width="300">
+### Users-sivu
+<img src="links/users.JPG" alt="FitnessStudio" width="300">
 
-* Add random tools ikkuna on piilotettu ikkuna, johon pääsee käsiksi painamalla 'F1'-nappia "Add a Tool" ikkunan auki ollessa
-* Tämä ikkuna oli luotu testaamista varten
-* Tämä metodi generoi käyttäjän syöttämän määrän satunnaisia työkaluja kaikkien käyttäjien kesken iTool-tietokantaan
+* Users sivulla adminit ja masterit pystyy hallinoimaan käyttäjiä.
+* Antaa bannia
+* Peruuttaa bannit
+* Poistaa käyttäjät
+* Ylentää (master)
+* Alentaa (master)
 
 ## Mukana tulevat tiedostot
 

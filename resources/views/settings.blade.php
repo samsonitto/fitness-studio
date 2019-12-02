@@ -8,8 +8,6 @@
                 <div class="card-header">{{ Auth::user()->name }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
 
                         
 
@@ -23,7 +21,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Group') }}</label>
 
                             <div class="col-md-6">
                                 <label for="password-confirm" class="col-form-label text-md-left">
@@ -40,12 +38,19 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Edit Profile') }}
-                                </button>
+                                <a style="margin:10px" href="{{ route('password.change') }}" class="btn btn-primary">
+                                    {{ __('Change Password') }}
+                                </a>
+                                <a style="margin:10px" href="{{ route('email.change') }}" class="btn btn-primary">
+                                    {{ __('Change Email') }}
+                                </a>
+                                <form  method="post" class="delete-form" action="{{ route('delete.account', Auth::user()->id) }}">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    <button style="margin:10px" type="submit" class="btn btn-danger">Delete Account</button>
+                                </form>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>

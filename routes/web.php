@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth','admin']], function() {
 Route::get('json-users','UserController@list_json');
 Route::get('coursejson', 'UserController@coursejson');
 Route::delete('users/delete/{id}', 'UserController@destroy');
+Route::delete('settings/delete-account/{id}', 'UserController@deleteAccount')->name('delete.account');
 Route::post('users/ban/{id}', 'UserController@ban');
 Route::post('users/unban/{id}', 'UserController@unban');
 Route::post('users/make_admin/{id}', 'UserController@make_master');
@@ -38,4 +39,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('bookings', 'BookingController@my_bookings');
 });
 Route::delete('bookings/delete/{id}', 'BookingController@destroy');
+
+Route::get('change-password', 'Auth\ChangePasswordController@index')->name('password.change');
+Route::post('change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
+
+Route::get('change-email', 'Auth\ChangePasswordController@email')->name('email.change');
+Route::post('change-email', 'Auth\ChangePasswordController@changeEmail')->name('email.update');
 

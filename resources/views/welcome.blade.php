@@ -13,11 +13,13 @@
                     @endif
 
                     <div class="card">
-                        <div class="card-header">{{ __('Welcome') }}</div>
+                        <div class="card-header">{{ __('Welcome, now you can be as jacked as me!') }}</div>
                             <img class="front-img" src="images\welcome.jpg" style="width:300px; margin:10px; border:1px solid gray">
                             <div class="card-body">
-                                Fitness Studio v1.0 - Root folder [ / ]<br>
-                                Login is not required to view this page
+                                <h3>Fitness Studio v0.1</h3><br>
+                                Physical fitness is a state of health and well-being and, more specifically, the ability to perform aspects of sports, occupations and daily activities. Physical fitness is generally achieved through proper nutrition, moderate-vigorous physical exercise, and sufficient rest.
+
+Before the industrial revolution, fitness was defined as the capacity to carry out the day’s activities without undue fatigue. However, with automation and changes in lifestyles physical fitness is now considered a measure of the body's ability to function efficiently and effectively in work and leisure activities, to be healthy, to resist hypokinetic diseases, and to meet emergency situations.
                             </div>
                         </div>
                     </div>

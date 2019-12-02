@@ -88,4 +88,11 @@ class UserController extends Controller
         $user->save();
         return redirect()->to('/users')->with('success', 'User ' . $user->name . " has been downgraded to regular person, payroll is getting smaller!");
     }
+
+    public function deleteAccount($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('login')->with('success', 'User ' . $user->name . " has been deleted!");
+    }
 }
