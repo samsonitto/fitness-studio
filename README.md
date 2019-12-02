@@ -277,7 +277,6 @@ Master-käyttäjä ylläpitää palvelua: lisää/poistaa tulevat liikuntatunnit
     User --> Comment
     Booking --> DB
     ClassIsAvailable --> DB
-    
 @enduml
 ```
 
