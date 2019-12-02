@@ -88193,9 +88193,10 @@ function (_Component) {
         margin: "5px"
       };
 
-      if (this.state.group == null) {
+      if (this.state.group == null || isNaN(userID)) {
         return null;
       } else {
+        console.log(userID);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           style: mystyle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Add new class"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -88231,7 +88232,6 @@ function (_Component) {
       var _this6 = this;
 
       var content = document.getElementById('info');
-      content.innerHTML = "";
       var url = '/api/course/' + id;
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (response) {
         console.log(response);
@@ -88241,6 +88241,7 @@ function (_Component) {
         });
 
         response.data.map(function (item) {
+          content.innerHTML = "";
           var h3 = document.createElement("h3");
           var pTime = document.createElement("p");
           var pDesc = document.createElement("p");

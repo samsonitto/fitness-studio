@@ -205,10 +205,11 @@ export default class Course extends Component {
         const eStyle = {
             margin: "5px"
         };
-        if(this.state.group == null){
+        if(this.state.group == null || isNaN(userID)){
             return null;
         }
         else {
+            console.log(userID);
             return (
                 <div style={mystyle}>
                 <h2>Add new class</h2>
@@ -239,7 +240,7 @@ export default class Course extends Component {
     showClass(id){
         
         var content = document.getElementById('info');
-        content.innerHTML = "";
+        
         let url = '/api/course/' + id;
         axios.get(url).then(response => {
             console.log(response);
@@ -247,6 +248,7 @@ export default class Course extends Component {
                 one: response.data
             });
             response.data.map(item =>{
+            content.innerHTML = "";
             var h3 = document.createElement("h3");
             var pTime = document.createElement("p");
             var pDesc = document.createElement("p");
