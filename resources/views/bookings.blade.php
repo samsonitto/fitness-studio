@@ -27,6 +27,7 @@
                                 <th scope="col">Teacher</th>
                                 <th scope="col">Start at</th>
                                 <th scope="col">End at</th>
+                                <th scope="col">Cancel</th>
                             </tr>
                         </thead>
                         <tbody>

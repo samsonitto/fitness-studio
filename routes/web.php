@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('settings', 'UserController@show_settings');
-Route::get('calendar', 'CalendarController@index');
+Route::get('calendar', 'CalendarController@index')->name('calendar');
 Route::group(['middleware' => ['auth','admin']], function() {
     Route::get('users', 'UserController@list_all');
 });
