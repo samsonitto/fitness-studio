@@ -141,7 +141,8 @@ export default class Course extends Component {
             alert("Invalid date or you are trying to add a class within next 24h");
             
         }
-        else if(!moment(this.state.endDate).isValid() || this.state.duration == ''){
+        else if( this.state.duration == ''){
+            console.log(this.state.endDate);
             alert('Enter Date');
         }
         else if(parseInt(this.state.duration) < 30 || parseInt(this.state.duration) > 90){

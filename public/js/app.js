@@ -88134,7 +88134,8 @@ function (_Component) {
 
       if (moment__WEBPACK_IMPORTED_MODULE_3___default()(this.state.date) < moment__WEBPACK_IMPORTED_MODULE_3___default()().add('days', 1)) {
         alert("Invalid date or you are trying to add a class within next 24h");
-      } else if (!moment__WEBPACK_IMPORTED_MODULE_3___default()(this.state.endDate).isValid() || this.state.duration == '') {
+      } else if (this.state.duration == '') {
+        console.log(this.state.endDate);
         alert('Enter Date');
       } else if (parseInt(this.state.duration) < 30 || parseInt(this.state.duration) > 90) {
         alert('Duration: from 30min up to 90min');

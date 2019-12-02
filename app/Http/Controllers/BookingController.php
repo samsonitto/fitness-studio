@@ -21,7 +21,7 @@ class BookingController extends Controller
 
     public function my_bookings()
     {
-        $bookings = DB::table('calendar')
+        $bookings = DB::table('my_booking')
         ->where('user_id', '=', Auth::user()->id)
         ->get();
 
