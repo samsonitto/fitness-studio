@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Fitness Studio v1.0</title>
+    <title>Fitness Studio v0.1</title>
 
     @if (!(Route::current()->getName() == 'calendar'))
     <!-- Scripts -->

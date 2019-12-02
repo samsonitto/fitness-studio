@@ -330,7 +330,8 @@ export default class Course extends Component {
                 content.appendChild(takeClassButton);
             }
             else {
-                if(!isBanned){
+                if(!isBanned && !isNaN(userID)){
+                console.log("else: " + userID);
                 var pYouAreIn = document.createElement('p');
                 pYouAreIn.appendChild(document.createTextNode('You have already booked this class!'));
                 pYouAreIn.style.color = 'red';

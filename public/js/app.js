@@ -88322,7 +88322,8 @@ function (_Component) {
           if (document.getElementById('calendar').className == '40520' && isInClass == false && !isBanned) {
             content.appendChild(takeClassButton);
           } else {
-            if (!isBanned) {
+            if (!isBanned && !isNaN(userID)) {
+              console.log("else: " + userID);
               var pYouAreIn = document.createElement('p');
               pYouAreIn.appendChild(document.createTextNode('You have already booked this class!'));
               pYouAreIn.style.color = 'red';
