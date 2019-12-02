@@ -245,21 +245,6 @@ Master-käyttäjä ylläpitää palvelua: lisää/poistaa tulevat liikuntatunnit
         +capacity
     }
     
-    class ToolCategory {
-        +toolCategoryID
-        +toolCategoryName
-        +toolCategoryDescription
-    }
-    
-    class Rating {
-        +ratingID
-        +rating
-        +ratingFeedback
-        +raterID
-        +ratedID
-        +transactionID
-    }
-    
     class DB {
         GetUsersFromMysql()
         GetClassesFromMysql()
@@ -284,18 +269,14 @@ Master-käyttäjä ylläpitää palvelua: lisää/poistaa tulevat liikuntatunnit
 ## Työnjako
 
 Samson Azizyan
-Suunnittelu, XAML toteutus, code in behind, testit, Mysql database (Tietokannat kurssi)
+Suunnittelu, front end, back end, testit, Mysql database, Laravel.
 
-## Työaika suunnitelma
+## Työaika
 
-* Viikko 11: MainWindow ja RegisterWindow sekä XAML että code in behind. User, Tool luokat, Mysql tietokanta (15h)
-* Viikko 12: DB, MainPage XAML ja code in behind, DB, Mysql (10h)
-* Viikko 13: ProfileWindow, DB (5h)
-* Viikko 14: Kaikkien ikkunoiden toimintojen parantamista, DB, Harjoitustyön suunnitelmä xD (17h)
-* Viikko 15: Kaikkien ikkunoiden toimintojen parantamista, DB, CommentWindow XAML, Mysql näkymät (20h)
-* Viikko 16: Rating Window, Testaaminen, debuggaaminen (10h)
-
-Pakko myöntää etää aloin koodaamaan jo viikolla 11 ja tein tämän suunnitelman vasta viikolla 14.
+* Viikko 47: Digital Ocean palvelimen setup, Laravel ympäristön asennus, mysql tietokannan
+toteutus (20h)
+* Viikko 48: Blade näkymät, reititys, tietokannan migratiot ja testidata, itseopiskelu, Reactin asennus Laravel ympäristöön, front end ohjelmointi, back end ohjelmointi (50h)
+* Viikko 49: Dokumentointi, testaaminen, bugien korjaus (10h)
 
 # Loppuraportti
 
