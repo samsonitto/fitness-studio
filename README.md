@@ -5,6 +5,7 @@
 * Samson Azizyan (M3156)
 * M3156 
 * Versionumero 0.1
+* [Fitness Studio](http://142.93.231.94/)
 
 
 ## Sisällysluettelo 
