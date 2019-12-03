@@ -296,7 +296,7 @@ Sovellus on toteutettu suunnitelman mukaan, ei poikennut vaatimusmäärittelyst�
 | FT08 |  Bännää käyttäjiä  | Pakollinen | 100% ||
 | FT09 |  Unbännää käyttäjiä  | Pakollinen | 100% ||
 | FT10 |  Käyttäjäkuvat  | Nice to have | 100% ||
-| FT11 |  Lisää/poista liikuntatunnit  | Pakollinen | 50% ||
+| FT11 |  Lisää/poista liikuntatunnit  | Pakollinen | 100% ||
 
 ### Toteuttamatta jääneet toiminnalliset vaatimukset
 
