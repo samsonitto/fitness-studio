@@ -46,3 +46,8 @@ Route::post('change-password', 'Auth\ChangePasswordController@changePassword')->
 Route::get('change-email', 'Auth\ChangePasswordController@email')->name('email.change');
 Route::post('change-email', 'Auth\ChangePasswordController@changeEmail')->name('email.update');
 
+Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('courses', 'CalendarController@my_courses')->name('admin.courses');
+});
+
+Route::delete('courses/{id}', 'ClassIsAvailableController@destroy')->name('delete.course');

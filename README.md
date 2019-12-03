@@ -33,7 +33,7 @@
 
 ## Sovelluksen yleiskuvaus
 
-Tarkoituksena on suunnitella ja toteuttaa websovelluksen imaginääristä liikuntapalveluja tarjoavaa yritystä. Palvelun käyttäjät voisivat tehdä liikuntatuntivarauksia ja palvelun ylläpitäjät/vetäjät pystyisivät poistaamaan köyttäjiä tai antaamaan nille varauskieltoa.
+Tarkoituksena on suunnitella ja toteuttaa websovelluksen imaginääristä liikuntapalveluja tarjoavaa yritystä varten. Palvelun käyttäjät voisivat tehdä liikuntatuntivarauksia ja palvelun ylläpitäjät/vetäjät pystyisivät poistaamaan käyttäjiä, antaamaan nille varauskieltoa ja lisäämään tulevia liikuntatunteja.
 
 ## Kohdeyleisö
 
@@ -335,6 +335,12 @@ Sain asennettu komponentin, mutta en saanut siihen dataa tietokannasta.
 * Bookings sivulla pääsee selaamaan omat tulevat liikuntatunnit.
 * Pystyy myös peruuttaamaan ne
 
+### 'My Courses'-sivu
+<img src="links/courses.JPG" alt="FinessStudio" width="700" style="border: 1px solid black">
+
+* Pääsee selailee kirjautuneen admin / master käyttäjän vetämät liikuntatunnit
+* Pystyy myös peruuttaamaan ne
+
 ### 'Settings'-sivu
 <img src="links/settings.JPG" alt="FinessStudio" width="700" style="border: 1px solid black">
 
@@ -379,7 +385,7 @@ Tietokantaan on luotu pari näkymää.
 
 ```sql
 CREATE VIEW calendar AS
-SELECT class_is_available.id, class.class_name as class, class.capacity as capacity, class.class_description as description, users.name as teacher, class_is_available.start_time as start, class_is_available.end_time as end
+SELECT class_is_available.id, class_is_available.teacher_id as teacher_id, class.class_name as class, class.capacity as capacity, class.difficulty as difficulty, class.class_description as description, users.name as teacher, class_is_available.start_time as start, class_is_available.end_time as end
 FROM class_is_available
 INNER JOIN class
   ON class.id = class_is_available.class_id
@@ -412,6 +418,8 @@ Suurin ongelma oli se Reactin kalenterikomponentti, johon suhteen luovutin pitk�
 
 #### Liikuntatuntien poistaminen
 Toinen ongelma oli liikuntatuntien poistaminen Classes sivulla, Laravel ja React ei suostunut tekemään yhteistyötä. FORBIDDEN DELETE METHOD 403. Tämän ominaisuuden voi siirtää ihan puhtaaseen Laraveliin. Teen sen, jos jää aikaa.
+
+PÄIVITYS: Ehdin tekemään tämän.
 
 #### Inputissa datetime-local
 Jostain syystä näytti koulukoneella aika jenkkiformatissa, omalla koneella kuitenkin toimii normaalisti. Täytyy tutkia.

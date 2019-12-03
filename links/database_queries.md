@@ -154,7 +154,7 @@ INNER JOIN booking
 
 ```sql
 CREATE VIEW calendar AS
-SELECT class_is_available.id, class.class_name as class, class.capacity as capacity, class.class_description as description, users.name as teacher, class_is_available.start_time as start, class_is_available.end_time as end
+SELECT class_is_available.id, class_is_available.teacher_id as teacher_id, class.class_name as class, class.capacity as capacity, class.difficulty as difficulty, class.class_description as description, users.name as teacher, class_is_available.start_time as start, class_is_available.end_time as end
 FROM class_is_available
 INNER JOIN class
   ON class.id = class_is_available.class_id

@@ -369,6 +369,7 @@ export default class Course extends Component {
                             <th>Start time</th>
                             <th>End time</th>
                             <th>Duration</th>
+                            <th>Difficulty</th>
                             <th>Capacity</th>
                         </tr>
                     </thead>
@@ -384,6 +385,7 @@ export default class Course extends Component {
                                     <td>{moment(course.start).format('MMMM Do YYYY, HH:mm:ss')}</td>
                                     <td>{moment(course.end).format('MMMM Do YYYY, HH:mm:ss')}</td>
                                     <td>{((new Date(course.end) - new Date(course.start))/60000+'min')}</td>
+                                    <td>{course.difficulty}/5</td>
                                     <td>{this.countBookings(course.id)}/{course.capacity}</td>
                                 </tr>
                             )}

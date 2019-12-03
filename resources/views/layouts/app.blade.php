@@ -50,6 +50,8 @@
                             @if (Auth::user()->group !== null)
                                 <li><a class="dropdown-item" href="{{ url('/users') }}">Users</a></li>
                                 <li class="divider"></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.courses') }}">My Courses</a></li>
+                                <li class="divider"></li>
                             @endif
                                 <li><a class="dropdown-item" href="{{ url('/bookings') }}">Bookings</a></li>
                             </ul>
