@@ -276,7 +276,7 @@ toteutus (20h)
 * Sovellus on implementoitu Laravel ympäristöllä, joka pyötii apache palvelimella, Digital Oceanin ubuntu-koneella.
 * Laravelin päälle on asennettu React.js ympäristö, jota on hyödynnetty ainoastaan "Classes" sivulla. Oli tarkoitus lisätä kalenteri-komponentti siihe, mutta oli hankalaa ja aika alkoi loppumaan kesken, joten luovutin sen.
 * Käytin mm Javascript, PHP, HTML, CSS, Jquery, Blade, Bootstrap
-* Asensin reactiin muutaman kirjaston: Stringify, Momentjs, Axios
+* Asensin reactiin muutaman kirjaston: Sequelize, Momentjs, Axios
 
 ## Tietoa ohjelmasta
 
