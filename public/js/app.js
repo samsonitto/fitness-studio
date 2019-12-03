@@ -88365,6 +88365,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Teacher"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Start time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "End time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Duration"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Difficulty"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Capacity"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.courses.map(function (course, index) {
         //console.log(this.state.courses);
         if (new Date(course.start) > new Date()) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+          style: {
+            cursor: "pointer"
+          },
           key: index,
           id: course.id,
           onClick: function onClick() {

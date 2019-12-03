@@ -26,10 +26,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Fitness Studio v1.0
+                    Fitness Studio v0.1
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -101,7 +101,7 @@
             </div>
         </nav>
 
-        <main class="py-4 ">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>

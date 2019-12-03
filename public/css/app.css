@@ -71,6 +71,10 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
+  background-image: url(../images/yoga.png);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 70px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4748,7 +4752,11 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: +1;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;

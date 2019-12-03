@@ -379,7 +379,7 @@ export default class Course extends Component {
                             //console.log(this.state.courses);
                             if(new Date(course.start) > new Date())
                             return (
-                                <tr key={index} id={course.id} onClick={()=>this.showClass(course.id)}>
+                                <tr style={{cursor:"pointer"}} key={index} id={course.id} onClick={()=>this.showClass(course.id)}>
                                     <td>{course.class}</td>
                                     <td>{course.teacher}</td>
                                     <td>{moment(course.start).format('MMMM Do YYYY, HH:mm:ss')}</td>
@@ -393,6 +393,7 @@ export default class Course extends Component {
                     </tbody>
                 </table>
                 </div>
+                
 
                 
             </div>
