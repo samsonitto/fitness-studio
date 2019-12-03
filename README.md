@@ -375,7 +375,7 @@ Lopullisessa tietokannassa on 4 taulua. Alkuperäisessä oli 3 taulua, siitä pu
 
 ### Fitness Studio Tietokanta
 
-<img src="images/iTool.JPG" alt="iTool v1" width="900">
+<img src="images/database.JPG" alt=" FitnessStudio v1" width="900">
 
 Tietokantaan on luotu pari näkymää.
 
