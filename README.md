@@ -454,10 +454,10 @@ Olen tehnyt kaiken yksin, joten on mennyt paljon aikaa tekemiseen. Täältä lö
 
 ### Webohjelmointi
 * Arvosanaehdotus webohjelmointi: 4
-* Perustelut: En ihan viitsinyt laittaa arvosananksi 5, koska on hieman spagettiä minun react-komponentti. Olen kuitenkin käyttänyt siihe paljon aikaa ja kaikki mahdolliset tekniikat. Komponentti toimii niin kuin pitääkin.
+* Perustelut: En ihan viitsinyt laittaa arvosananksi 5, koska on hieman spagettiä minun react-komponentti. Olen kuitenkin käyttänyt siihen paljon aikaa ja kaikki mahdolliset tekniikat. Komponentti toimii niin kuin pitääkin.
 
 ### Pohdinta
-* Molemmat kurssit olivat tosi työläistä, mutta se on vaan hyvä asia. Mitä työläämpi kurssi, sitä paremmin oppii. Ehkä minun ei olisi pitänyt sekoittaa React, php, javascript, node. Olisin varmaan voinut päästä hempommalla, mutta tulipa opittu paljon.
+* Molemmat kurssit olivat tosi työläitä, mutta se on vaan hyvä asia. Mitä työläämpi kurssi, sitä paremmin oppii. Ehkä minun ei olisi pitänyt sekoittaa React, php, javascript, node. Olisin varmaan voinut päästä hempommalla, mutta tulipa opittu paljon.
 
 * Mitä opin: Opin tekemään web-sovelluksia käyttämällä monta eri tekniikkaa. Eniten opin käyttämään Laravelia, se vaikutti alussa tosi sekaavalta, mutta loppujen lopsi se osoittautui todella käteväksi ympäristöksi.
 
