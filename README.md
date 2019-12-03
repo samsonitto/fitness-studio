@@ -409,7 +409,7 @@ INNER JOIN booking
 	ON class_is_available.id = booking.class_is_available_id;
 ```
 
-[Alkuperäisen tietokannan luontiskripti ja queryhistoria](linkit/database_queries.md)
+[Alkuperäisen tietokannan luontiskripti ja queryhistoria](links/database_queries.md)
 
 ## Ongelmat, jatkokehitysideat
 
